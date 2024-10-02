@@ -1,24 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/gradient_container.dart';
+import 'package:flutter_app/start_screen.dart';
 
 void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
+  runApp(
+    MaterialApp(
       home: Scaffold(
-        backgroundColor: const Color.fromARGB(255, 74, 240, 102),
-        // body: GradientContainer.bgRtk()
-        body: GradientContainer(
-          Color.fromARGB(255, 36, 207, 30),
-          Color.fromARGB(255, 92, 34, 201),
+        body: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+                colors: [Colors.deepPurple, Colors.orangeAccent],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight),
+          ),
+          child: const StartScreen(),
         ),
       ),
-    );
-  }
+    ),
+  );
 }
