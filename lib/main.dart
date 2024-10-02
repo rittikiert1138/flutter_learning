@@ -12,9 +12,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: Scaffold(
-        backgroundColor: Color.fromARGB(255, 74, 240, 102),
+        backgroundColor: const Color.fromARGB(255, 74, 240, 102),
+        // body: GradientContainer.bgRtk()
         body: GradientContainer(
-            Color.fromARGB(255, 36, 207, 30), Color.fromARGB(255, 92, 34, 201)),
+          Color.fromARGB(255, 36, 207, 30),
+          Color.fromARGB(255, 92, 34, 201),
+        ),
       ),
     );
   }
